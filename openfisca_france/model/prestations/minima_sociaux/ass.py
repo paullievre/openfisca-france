@@ -90,7 +90,7 @@ class ass_base_ressources_i(SimpleFormulaColumn):
         period = period.start.offset('first-of', 'month').period('month')
         previous_year = period.start.period('year').offset(-1)
 
-        sali = simulation.calculate_add('sali', previous_year)
+        sali = simulation.calculate_add('sali', previous_year)  # TODO replace with salaire_imposable?
         rstnet = simulation.calculate('rstnet', previous_year)
         tns_auto_entrepreneur_benefice = simulation.calculate_add('tns_auto_entrepreneur_benefice', previous_year)
         tns_micro_entreprise_benefice = simulation.calculate_add('tns_micro_entreprise_benefice', period)

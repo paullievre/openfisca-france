@@ -1,0 +1,91 @@
+- name: "2 parents 2 enfants locataire pas de revenus"
+  period: 2015-01
+  absolute_error_margin: 0.5
+  menages:
+    personne_de_reference: "parent1"
+    conjoint: "parent2"
+    enfants: ["enfant1", "enfant2"]
+    statut_occupation: 4
+  individus:
+    - id: "parent1"
+      age: 40
+      sali: 0
+    - id: "parent2"
+      age: 40
+    - id: "enfant1"
+      age: 9
+    - id: "enfant2"
+      age: 9
+  output_variables:
+    fsl_eligibilite: true
+
+- name: "2 parents 2 enfants propriétaire pas de revenus"
+  period: 2015-01
+  absolute_error_margin: 0.5
+  menages:
+    personne_de_reference: "parent1"
+    conjoint: "parent2"
+    enfants: ["enfant1", "enfant2"]
+    statut_occupation: 1
+  individus:
+    - id: "parent1"
+      age: 40
+      sali: 0
+    - id: "parent2"
+      age: 40
+    - id: "enfant1"
+      age: 9
+    - id: "enfant2"
+      age: 9
+  output_variables:
+    fsl_eligibilite: false
+
+- name: "2 parents 2 enfants locataire revenus au-dessus du seuil"
+  period: 2015-01
+  absolute_error_margin: 0.5
+  menages:
+    personne_de_reference: "parent1"
+    conjoint: "parent2"
+    enfants: ["enfant1", "enfant2"]
+    statut_occupation: 3
+  individus:
+    - id: "parent1"
+      age: 40
+      sali:
+        2014: 1391 * 2.1 * 12
+    - id: "parent2"
+      age: 40
+    - id: "enfant1"
+      age: 9
+    - id: "enfant2"
+      age: 9
+  output_variables:
+    fsl_eligibilite: false
+
+- name: "1 parent locataire revenus au-dessus du seuil"
+  period: 2015-01
+  absolute_error_margin: 0.5
+  menages:
+    personne_de_reference: "parent1"
+    statut_occupation: 3
+  individus:
+    - id: "parent1"
+      age: 40
+      sali:
+        2014: 1391 * 12
+  output_variables:
+    fsl_eligibilite: false
+
+- name: "1 parent locataire revenus au-dessous du seuil"
+  period: 2015-01
+  absolute_error_margin: 0.5
+  menages:
+    personne_de_reference: "parent1"
+    statut_occupation: 3
+  individus:
+    - id: "parent1"
+      age: 40
+      sali:
+        2014: 1389 * 12
+  output_variables:
+    fsl_eligibilite: true

@@ -56,11 +56,11 @@ tax_benefit_system = TaxBenefitSystem()
 
 build_reform_functions = [
     aides_ville_paris.build_reform,
-    allocations_familiales_imposables.build_reform,
-    cesthra_invalidee.build_reform,
-    plf2015.build_reform,
-    plfr2014.build_reform,
-    trannoy_wasmer.build_reform,
+    # allocations_familiales_imposables.build_reform,
+    # cesthra_invalidee.build_reform,
+    # plf2015.build_reform,
+    # plfr2014.build_reform,
+    # trannoy_wasmer.build_reform,
     ]
 known_reforms = [
     build_reform(tax_benefit_system)

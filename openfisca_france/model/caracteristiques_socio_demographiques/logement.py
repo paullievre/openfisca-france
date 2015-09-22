@@ -22,11 +22,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-
-from numpy import logical_not as not_, logical_or as or_
 from numpy.core.defchararray import startswith
-
-
 from ..base import *  # noqa analysis:ignore
 
 

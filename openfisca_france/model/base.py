@@ -88,8 +88,13 @@ from numpy import (
     logical_and as and_,
     logical_not as not_,
     logical_or as or_,
+    logical_xor as xor_,
+    round as round_,
     maximum as max_,
     minimum as min_,
+    ceil,
+    floor,
+    zeros,
     )
 
 numpy_imports = [
@@ -97,8 +102,13 @@ numpy_imports = [
     'and_',
     'not_',
     'or_',
+    'xor_',
     'max_',
     'min_',
+    'round_',
+    'ceil',
+    'floor',
+    'zeros',
     ]
 
 __all__ = [

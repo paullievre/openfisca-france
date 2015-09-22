@@ -23,8 +23,6 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from numpy import maximum as max_, minimum as min_
-
 from ...base import *  # noqa analysis:ignore
 
 
